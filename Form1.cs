@@ -11,6 +11,7 @@ namespace EnigmaApp_v2
 {
     public partial class Enigma : Form
     {
+        string abc = "abcdefghijklmnopqrstuvwxyz";
         string input = "";
         string output = "";
         int processingItem = new int();
@@ -49,7 +50,7 @@ namespace EnigmaApp_v2
                 //encrypt processingItem
                 processingItem = runEncrypt(processingItem);
                 //add processingItem, change to letter, and add to output
-                output = output + numberToLetterEncode(processingItem);
+                output += numberToLetterEncode(processingItem);
                 //remove processed character from string
                 input = input.Remove(0,1);
             }
@@ -71,7 +72,7 @@ namespace EnigmaApp_v2
                 //decrypt processingItem
                 processingItem = runDecrypt(processingItem);
                 //add processingItem, change to letter, and add to output
-                output = output + numberToLetterEncode(processingItem);
+                output += numberToLetterEncode(processingItem);
                 //remove processed character from string
                 input = input.Remove(0, 1);
             }
@@ -165,10 +166,8 @@ namespace EnigmaApp_v2
 
         public int letterToNumberDecode(string letter)
         {
-            int number = new int();
-            char letterChar = Convert.ToChar(letter);
-            number = (Convert.ToInt32(letterChar)) - 32;
-
+            return abc.IndexOf(letter);
+            
             #region oldDecode
             //if (letter == "a")
             //    number = 0;
@@ -225,15 +224,12 @@ namespace EnigmaApp_v2
             //else if (letter == " ")
             //    number = 26;
             #endregion
-
-            return number;
         }
 
         public string numberToLetterEncode(int number)
         {
-            string letter = "";
-            char numberChar = Convert.ToChar(number);
-            letter = (Convert.ToString((char) (numberChar + 32)));
+            return abc[number].ToString();
+            
             #region oldEncode
             //if (number == 0)
             //    letter = "a";
@@ -290,7 +286,6 @@ namespace EnigmaApp_v2
             //if (number == 26)
             //    letter = " ";
             #endregion
-            return letter;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
