@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblInput = new System.Windows.Forms.Label();
-            this.txtOutput = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.btnDecrypt = new System.Windows.Forms.Button();
@@ -40,7 +39,6 @@
             this.txtRotorIStart = new System.Windows.Forms.TextBox();
             this.txtRotorIIStart = new System.Windows.Forms.TextBox();
             this.txtRotorIIIStart = new System.Windows.Forms.TextBox();
-            this.txtInput = new System.Windows.Forms.TextBox();
             this.rxtOutput = new System.Windows.Forms.RichTextBox();
             this.rxtInput = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -53,14 +51,6 @@
             this.lblInput.Size = new System.Drawing.Size(31, 13);
             this.lblInput.TabIndex = 1;
             this.lblInput.Text = "Input";
-            // 
-            // txtOutput
-            // 
-            this.txtOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOutput.Location = new System.Drawing.Point(490, 17);
-            this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(161, 24);
-            this.txtOutput.TabIndex = 2;
             // 
             // lblOutput
             // 
@@ -149,15 +139,6 @@
             this.txtRotorIIIStart.Size = new System.Drawing.Size(32, 20);
             this.txtRotorIIIStart.TabIndex = 14;
             // 
-            // txtInput
-            // 
-            this.txtInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInput.Location = new System.Drawing.Point(244, 17);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(164, 24);
-            this.txtInput.TabIndex = 0;
-            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
-            // 
             // rxtOutput
             // 
             this.rxtOutput.Location = new System.Drawing.Point(436, 73);
@@ -192,9 +173,7 @@
             this.Controls.Add(this.btnDecrypt);
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.lblOutput);
-            this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.lblInput);
-            this.Controls.Add(this.txtInput);
             this.Name = "Enigma";
             this.Text = "Enigma";
             this.ResumeLayout(false);
@@ -205,7 +184,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblInput;
-        private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.Button btnEncrypt;
         private System.Windows.Forms.Button btnDecrypt;
@@ -216,7 +194,6 @@
         private System.Windows.Forms.TextBox txtRotorIStart;
         private System.Windows.Forms.TextBox txtRotorIIStart;
         private System.Windows.Forms.TextBox txtRotorIIIStart;
-        private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.RichTextBox rxtOutput;
         private System.Windows.Forms.RichTextBox rxtInput;
 
